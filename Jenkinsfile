@@ -25,11 +25,5 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') { 
-            steps {
-                sh 'kubectl apply -f postgres.yaml'
-                sh 'kubectl apply -f k8s/k8s.yaml'
-            }
-        }
     }
 }
